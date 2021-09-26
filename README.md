@@ -20,9 +20,11 @@ brew install bochs
 
 `boot_sect.hex` - bootloader code, in hex
 
-`boot_sect.bin` - bootloader executable, converted directly from hex
+`boot_sect.bin` - bootloader executable (output of either hex conversion or assembly)
 
-### build
+`boot_sect.asm` - bootloader cond, in asm
+
+### build from hex
 
 Directly from hexdump
 
@@ -44,8 +46,20 @@ hex dump using:
 xxd bootsect.bin
 ```
 
-### run
+### run in emulator
 
 ```
 bochs
+```
+
+### build using assembly
+
+```
+nasm boot_sect.asm -f bin -o boot_sect.bin
+```
+
+same thing from Makefile:
+
+```
+make asm
 ```
