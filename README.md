@@ -52,6 +52,12 @@ qemu-system-x86_64 boot_sect.bin
 
 or, use the qemu binary for your platform
 
+shortcut to above command:
+
+```
+make run_x86
+```
+
 ## how do i build the same bootloader using assembly?
 
 ```
