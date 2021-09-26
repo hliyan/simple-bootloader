@@ -30,10 +30,22 @@ Directly from hexdump
 xxd -r -p boot_sect.hex boot_sect.bin
 ```
 
+same thing from Makefile:
+
+```
+make hex
+```
+
 ### compare the binary output to hex source
 
 hex dump using:
 
 ```
 xxd bootsect.bin
+```
+
+### run
+
+```
+bochs
 ```
