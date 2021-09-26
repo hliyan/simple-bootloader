@@ -63,3 +63,13 @@ same thing from Makefile:
 ```
 make asm
 ```
+
+### if you don't have nasm
+
+```
+brew install nasm
+```
+
+or, equivalent for your platform.
+
+
