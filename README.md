@@ -1,4 +1,4 @@
-# bochs-test
+# simple bootloader
 
 ### reading
 
