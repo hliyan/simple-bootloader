@@ -1,30 +1,28 @@
 # simple bootloader
 
-### reading
+### how do i learn about this?
 
-source: https://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf
+read the first 13 pages of: https://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf
 
-### prerequisites
+### what tools do i need?
 
-install bochs
+install qemu
 
 ```
-brew install bochs
+brew install qemu
 ```
 
 (or do the equivalent for your platform)
 
-### files
-
-`bochsrc` - bochs configuration file
+### what are the files here?
 
 `boot_sect.hex` - bootloader code, in hex
 
 `boot_sect.bin` - bootloader executable (output of either hex conversion or assembly)
 
-`boot_sect.asm` - bootloader cond, in asm
+`boot_sect.asm` - same bootloader code, in asm
 
-### build from hex
+### how do i build from hex file?
 
 Directly from hexdump
 
@@ -38,7 +36,7 @@ same thing from Makefile:
 make hex
 ```
 
-### compare the binary output to hex source
+### how do i inspect the binary file in hex format?
 
 hex dump using:
 
@@ -46,13 +44,15 @@ hex dump using:
 xxd bootsect.bin
 ```
 
-### run in emulator
+### how do i use this bootloader in an emulator?
 
 ```
-bochs
+qemu-system-x86_64 boot_sect.bin
 ```
 
-### build using assembly
+or, use the qemu binary for your platform
+
+### how do i build the same bootloader using assembly?
 
 ```
 nasm boot_sect.asm -f bin -o boot_sect.bin
@@ -64,7 +64,7 @@ same thing from Makefile:
 make asm
 ```
 
-### if you don't have nasm
+### how do i install nasm if i don't have it?
 
 ```
 brew install nasm
